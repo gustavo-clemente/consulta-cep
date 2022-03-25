@@ -14,25 +14,19 @@
             "email": "gustavo.clementelopes@gmail.com"
         }
     ],
-
     "scripts": {
-
-        "scripts": {
-            "changelog": "conventional-changelog",
-            "release": "conventional-changelog --commit",
-            "release:patch": "conventional-changelog --patch --commit",
-            "release:minor": "conventional-changelog --minor --commit",
-            "release:major": "conventional-changelog --major --commit",
-            "release:first": "conventional-changelog --first-release --commit"
-
-          }
-        
+        "changelog": "conventional-changelog",
+        "release": "conventional-changelog --commit",
+        "release:patch": "conventional-changelog --patch --commit",
+        "release:minor": "conventional-changelog --minor --commit",
+        "release:major": "conventional-changelog --major --commit",
+        "release:first": "conventional-changelog --first-release --commit"
     },
     "require": {
-
-        "php" : ">=7.4.0"
+        "php": ">=7.4.0"
     },
     "require-dev": {
         "marcocesarato/php-conventional-changelog": "^1.13"
-    }
+    },
+    "version": "1.0.0"
 }
