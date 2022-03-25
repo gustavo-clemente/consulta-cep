@@ -1,0 +1,38 @@
+{
+    "name": "gustavo/consulta-cep",
+    "description": "Uma simples biblioteca escrita em PHP para consulta de CEP que utiliza a API viacep",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Gustavo\\ConsultaCep\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "gustavo clemente",
+            "email": "gustavo.clementelopes@gmail.com"
+        }
+    ],
+
+    "scripts": {
+
+        "scripts": {
+            "changelog": "conventional-changelog",
+            "release": "conventional-changelog --commit",
+            "release:patch": "conventional-changelog --patch --commit",
+            "release:minor": "conventional-changelog --minor --commit",
+            "release:major": "conventional-changelog --major --commit",
+            "release:first": "conventional-changelog --first-release --commit"
+
+          }
+        
+    },
+    "require": {
+
+        "php" : ">=7.4.0"
+    },
+    "require-dev": {
+        "marcocesarato/php-conventional-changelog": "^1.13"
+    }
+}
