@@ -6,4 +6,4 @@ use Gustavo\ConsultaCep\Search;
 
 $search = new Search();
 
-print_r($search->getAddressByZipCode('02473090'));
+print_r($search->getAddressByZipCode('02473090','apicep'));
