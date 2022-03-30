@@ -33,10 +33,10 @@ class SearchTest extends TestCase
      */
     public function testGetAddressByInvalidAPI(){
 
+        $this->expectException(InvalidArgumentException::class);
+
         $search = new Search();
         $result = $search->getAddressByZipCode('02473090', 'cepi');
-
-        $this->expectException(InvalidArgumentException::class);
 
     }
 

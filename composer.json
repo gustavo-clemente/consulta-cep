@@ -21,7 +21,9 @@
         "release:minor": "conventional-changelog --minor --commit",
         "release:major": "conventional-changelog --major --commit",
         "release:first": "conventional-changelog --first-release --commit",
-        "test" : "phpunit test/"
+        "test" : "phpunit test/",
+        "test:log" : "phpunit test/ --testdox-text=test_log.txt",
+        "test:coverage": "phpunit test/ --coverage-html=_coverage --whitelist=src/"
     },
     "require": {
         "php": ">=7.4.0"
