@@ -20,13 +20,15 @@
         "release:patch": "conventional-changelog --patch --commit",
         "release:minor": "conventional-changelog --minor --commit",
         "release:major": "conventional-changelog --major --commit",
-        "release:first": "conventional-changelog --first-release --commit"
+        "release:first": "conventional-changelog --first-release --commit",
+        "test" : "phpunit test/"
     },
     "require": {
         "php": ">=7.4.0"
     },
     "require-dev": {
-        "marcocesarato/php-conventional-changelog": "^1.13"
+        "marcocesarato/php-conventional-changelog": "^1.13",
+        "phpunit/phpunit": "^9.5"
     },
     "version": "1.1.0"
 }
