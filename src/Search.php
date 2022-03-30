@@ -52,7 +52,9 @@ class Search
 
         if ($this->isAPIValid($api)) {
 
-            if ($zipcode = preg_replace('/[^0-9]/', '', $zipcode)) {
+            $zipcode = preg_replace('/[^0-9]/', '', $zipcode);
+
+            if (preg_match('/[0-9]{8}/',$zipcode)) {
 
                 $url = $this->url_map[$api]['url'];
                 $url_formated = str_replace(':zipcode',$zipcode,$url);
@@ -63,7 +65,10 @@ class Search
 
             } else {
 
-                return [];
+                return [
+
+                    'msg' => 'O CEP informado é invalido'
+                ];
             }
         } else {
 
@@ -76,18 +81,18 @@ class Search
      * Retorna todas as API's para consultas de CEP que podem ser utilizadas
      * @return array
      */
-    public function getAvaliableAPIS()
+    public function getAvaliableAPIS() : array
     {
 
         return array_keys($this->url_map);
     }
 
     /**
-     * Indica se uma determinada API é válida
+     * Indica se a API utilizada para consulta é válida
      * @param string $api API que será verificada
      * @return bool
      */
-    private function isAPIValid(string $api)
+    private function isAPIValid(string $api) : bool
     {
 
         return isset($this->url_map[$api]);
